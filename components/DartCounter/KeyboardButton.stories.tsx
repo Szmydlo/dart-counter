@@ -11,6 +11,26 @@ const meta: Meta<typeof KeyboardButton> = {
    * to learn how to generate automatic titles
    */
   component: KeyboardButton,
+  argTypes: {
+    buttonText: {
+      options: [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "CLR",
+        "OK",
+        "BACK",
+      ],
+      control: { type: "select" },
+    },
+  },
 };
 
 export default meta;
@@ -22,6 +42,8 @@ type Story = StoryObj<typeof KeyboardButton>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  name: "Whole component",
-  render: () => <KeyboardButton />,
+  render: (args) => <KeyboardButton {...args} />,
+  args: {
+    buttonText: "0",
+  },
 };
