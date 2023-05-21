@@ -17,6 +17,9 @@ const config: StorybookConfig = {
       },
     },
   ],
+  typescript: {
+    reactDocgen: false,
+  },
   framework: {
     name: "@storybook/nextjs",
     options: {},

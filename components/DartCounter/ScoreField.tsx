@@ -1,12 +1,23 @@
-import MathPanel from "./MathPanel";
+import MathPanel, { mathPanelProps } from "./MathPanel";
+
 import React from "react";
 import ScoreText from "./ScoreText";
 
-const ScoreField = () => {
+const ScoreField = ({
+  score = 0,
+  mathObject,
+}: {
+  score: number;
+  mathObject: mathPanelProps;
+}) => {
   return (
-    <div>
-      <ScoreText />
-      <MathPanel />
+    <div className="bg-green-700 w-[300px] h-[200px] text-center">
+      <div className="py-5 h-[100px]">
+        <ScoreText value={score} />
+      </div>
+      <div className="flex justify-center">
+        <MathPanel {...mathObject} />
+      </div>
     </div>
   );
 };

@@ -1,20 +1,18 @@
-// Button.stories.ts|tsx
-
 import type { Meta, StoryObj } from "@storybook/react";
 
+import CurrentNumericValueField from "./CurrentNumericValueField";
 import React from "react";
-import ScoreField from "./ScoreField";
 
-const meta: Meta<typeof ScoreField> = {
+const meta: Meta<typeof CurrentNumericValueField> = {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  component: ScoreField,
+  component: CurrentNumericValueField,
 };
 
 export default meta;
-type Story = StoryObj<typeof ScoreField>;
+type Story = StoryObj<typeof CurrentNumericValueField>;
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -22,15 +20,8 @@ type Story = StoryObj<typeof ScoreField>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: (args) => <ScoreField {...args} />,
+  render: (args) => <CurrentNumericValueField {...args} />,
   args: {
-    score: 180,
-    mathObject: {
-      avg: 65.78,
-      legAvg: 70.01,
-      sets: 2,
-      legs: 1,
-      lastScore: 50,
-    },
+    value: 123,
   },
 };

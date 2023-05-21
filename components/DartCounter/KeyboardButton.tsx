@@ -1,17 +1,12 @@
 import React from "react";
 
 type props = {
-  buttonText: string;
+  buttonText: string | number;
   onPress: () => void;
   warning?: boolean;
   confirm?: boolean;
 };
-const KeyboardButton = ({
-  buttonText = "as",
-  onPress,
-  warning,
-  confirm,
-}: props) => {
+const KeyboardButton = ({ buttonText, onPress, warning, confirm }: props) => {
   let classes = "bg-gray-400 hover:bg-gray-600";
   if (warning) classes = "bg-red-400 hover:bg-red-600";
   if (confirm) classes = "bg-green-400 hover:bg-green-600";

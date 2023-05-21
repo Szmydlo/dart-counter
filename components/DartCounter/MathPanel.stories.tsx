@@ -23,5 +23,12 @@ type Story = StoryObj<typeof MathPanel>;
  */
 export const Primary: Story = {
   name: "Whole component",
-  render: () => <MathPanel />,
+  render: (args) => <MathPanel {...args} />,
+  args: {
+    avg: 66.78,
+    legAvg: 71.03,
+    sets: 1,
+    legs: 1,
+    lastScore: 98,
+  },
 };

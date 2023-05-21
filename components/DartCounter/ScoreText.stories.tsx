@@ -23,5 +23,8 @@ type Story = StoryObj<typeof ScoreText>;
  */
 export const Primary: Story = {
   name: "Whole component",
-  render: () => <ScoreText />,
+  render: (args) => <ScoreText {...args} />,
+  args: {
+    value: 123,
+  },
 };

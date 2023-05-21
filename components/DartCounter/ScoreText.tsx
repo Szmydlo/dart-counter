@@ -1,7 +1,14 @@
 import React from "react";
 
-const ScoreText = () => {
-  return <div>ScoreText</div>;
+type props = {
+  value: number;
+};
+const ScoreText = ({ value }: props) => {
+  return (
+    <span className="text-6xl inline-block h-[60px]">
+      <b>{value}</b>
+    </span>
+  );
 };
 
 export default ScoreText;
