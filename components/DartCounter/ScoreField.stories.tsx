@@ -32,5 +32,6 @@ export const Primary: Story = {
       legs: 1,
       lastScore: 50,
     },
+    noOfPlayers: 2,
   },
 };

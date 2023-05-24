@@ -12,7 +12,7 @@ const KeyboardButton = ({ buttonText, onPress, warning, confirm }: props) => {
   if (confirm) classes = "bg-green-400 hover:bg-green-600";
   return (
     <button
-      className={`w-[100px] text-black h-[50px] leading-10 text-2xl ${classes}`}
+      className={`min-w-full text-black h-[50px] leading-10 text-2xl ${classes}`}
       onClick={onPress}
     >
       {buttonText}

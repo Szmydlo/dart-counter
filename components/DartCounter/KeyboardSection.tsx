@@ -19,7 +19,7 @@ const KeyboardSection = () => {
     }
   };
   return (
-    <div className="grid grid-cols-3 grid-rows-4 gap-0 w-[300px]">
+    <div className="grid grid-cols-3 grid-rows-4 gap-0 w-[400px]">
       <KeyboardButton buttonText="BACK" />
       <CurrentNumericValueField value={currentValue} />
       <KeyboardButton buttonText="FINISH" />

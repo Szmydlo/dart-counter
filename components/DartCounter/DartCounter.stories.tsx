@@ -23,5 +23,8 @@ type Story = StoryObj<typeof DartCounter>;
  */
 export const Primary: Story = {
   name: "Whole component",
-  render: () => <DartCounter />,
+  render: (args) => <DartCounter {...args} />,
+  args: {
+    noOfPlayers: 1,
+  },
 };

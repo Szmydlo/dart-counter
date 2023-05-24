@@ -15,7 +15,7 @@ const MathPanel = ({
   lastScore = 0,
 }: mathPanelProps) => {
   return (
-    <div className="bg-gray-400 w-[200px] h-[100px] text-center flex flex-col justify-center">
+    <div className="bg-gray-400 min-w-full h-[100px] text-center flex flex-col justify-center">
       <span>
         Avg: <b>{avg.toFixed(2)}</b> | Leg Avg: <b>{legAvg.toFixed(2)}</b>
       </span>
